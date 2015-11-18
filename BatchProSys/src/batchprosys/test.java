@@ -10,5 +10,6 @@ package batchprosys;
  * @author akilajwasala
  */
 public class test {
+    System.out.println("Test");
     
 }
