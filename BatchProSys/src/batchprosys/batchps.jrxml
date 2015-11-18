@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="batchps" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c2951adc-9804-4278-b791-3639abba61cf">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="8"/>
+	<property name="ireport.callouts" value="##Sun Nov 01 23:00:55 IST 2015"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     order_plan.`Oreder_Article` AS order_plan_Oreder_Article,
+     order_plan.`SAP_No` AS order_plan_SAP_No,
+     order_plan.`Order_Quantity` AS order_plan_Order_Quantity,
+     order_plan.`Batch_Quantity` AS order_plan_Batch_Quantity,
+     order_plan.`No_Of_Batches` AS order_plan_No_Of_Batches,
+     section_details.`duration` AS section_details_duration,
+     section_details.`opw` AS section_details_opw,
+     section_details.`oal` AS section_details_oal,
+     section_details.`ows` AS section_details_ows,
+     section_details.`oqc` AS section_details_oqc,
+     section_details.`otesting` AS section_details_otesting,
+     section_details.`ofinal` AS section_details_ofinal,
+     section_details.`opacking` AS section_details_opacking,
+     section_details.`mpw` AS section_details_mpw,
+     section_details.`mal` AS section_details_mal,
+     section_details.`mws` AS section_details_mws,
+     section_details.`mqc` AS section_details_mqc,
+     section_details.`mtesting` AS section_details_mtesting,
+     section_details.`mfinal` AS section_details_mfinal,
+     section_details.`mpacking` AS section_details_mpacking
+FROM
+     `order_plan` order_plan,
+     `section_details` section_details]]>
+	</queryString>
+	<field name="order_plan_Oreder_Article" class="java.lang.String"/>
+	<field name="order_plan_SAP_No" class="java.lang.String"/>
+	<field name="order_plan_Order_Quantity" class="java.lang.Integer"/>
+	<field name="order_plan_Batch_Quantity" class="java.lang.Integer"/>
+	<field name="order_plan_No_Of_Batches" class="java.lang.Integer"/>
+	<field name="section_details_duration" class="java.lang.Integer"/>
+	<field name="section_details_opw" class="java.lang.Integer"/>
+	<field name="section_details_oal" class="java.lang.Integer"/>
+	<field name="section_details_ows" class="java.lang.Integer"/>
+	<field name="section_details_oqc" class="java.lang.Integer"/>
+	<field name="section_details_otesting" class="java.lang.Integer"/>
+	<field name="section_details_ofinal" class="java.lang.Integer"/>
+	<field name="section_details_opacking" class="java.lang.Integer"/>
+	<field name="section_details_mpw" class="java.lang.Integer"/>
+	<field name="section_details_mal" class="java.lang.Integer"/>
+	<field name="section_details_mws" class="java.lang.Integer"/>
+	<field name="section_details_mqc" class="java.lang.Integer"/>
+	<field name="section_details_mtesting" class="java.lang.Integer"/>
+	<field name="section_details_mfinal" class="java.lang.Integer"/>
+	<field name="section_details_mpacking" class="java.lang.Integer"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#666666" uuid="08a37298-2a89-44fc-9ad3-db7b062b7a04"/>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#0099FF" backcolor="#FFFFFF" uuid="aea3fed5-5a77-4539-8278-a16fc3b2e9ab"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Final Report]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="8" y="63" width="180" height="20" forecolor="#FFFFFF" uuid="483dc75b-cc92-4b09-8154-187b2cf068c1"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Batch Production System]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="9"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="216c39e5-1d2c-4bdb-976a-589ae9282ad1"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="1" width="121" height="20" forecolor="#CCCCCC" backcolor="#666666" uuid="d7fde9e7-6c1c-4e56-93ff-8f7627a93a20"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Oreder_Article]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="121" y="1" width="68" height="20" forecolor="#CCCCCC" backcolor="#666666" uuid="baa1c298-90cd-412f-b88b-6b9246e4bc02"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SAP_No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="189" y="1" width="120" height="20" forecolor="#CCCCCC" backcolor="#666666" uuid="aaba1e96-373b-44c8-99c5-89fa9a35c30f"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Order_Quantity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="309" y="1" width="123" height="20" forecolor="#CCCCCC" backcolor="#666666" uuid="a26a9682-3e6a-404a-bd01-e53faf257053"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Batch_Quantity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="432" y="1" width="123" height="20" forecolor="#CCCCCC" backcolor="#666666" uuid="149f8fbc-818a-4bad-a671-442aba581850"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No_Of_Batches]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="ef3d928a-6b00-4e81-8fdd-9070699fd3b0"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="27" y="0" width="94" height="20" uuid="f7e7d9bf-e66e-44d5-984d-6ab2fc70bd0a"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{order_plan_Oreder_Article}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="134" y="0" width="55" height="20" uuid="88635176-1e3b-4193-8a6c-6c7dc7b86ffb"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{order_plan_SAP_No}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="340" y="0" width="92" height="20" uuid="70618241-1976-4a44-834b-3a1985d8c414"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{order_plan_Batch_Quantity}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="216" y="0" width="93" height="20" uuid="9d5022ba-5e39-44fe-8819-8ede8e04257e"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{order_plan_Order_Quantity}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="461" y="0" width="94" height="20" uuid="c888b2e4-de12-4b34-a148-4f6eb2a8a6f7"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{order_plan_No_Of_Batches}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="197">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="39" width="121" height="20" forecolor="#FFFFFF" backcolor="#999999" uuid="70c183bf-bf6e-487a-ba15-c3e7bb419b27"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Pre Work]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="59" width="121" height="20" forecolor="#FFFFFF" backcolor="#999999" uuid="95bd6806-a07e-4b35-891e-8252b04ff3e5"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Assembly Line]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="79" width="121" height="20" forecolor="#FFFFFF" backcolor="#999999" uuid="6bcf128b-6ca9-4dbb-8e34-2021c7a0b933"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Wave Soldering]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="99" width="121" height="20" forecolor="#FFFFFF" backcolor="#999999" uuid="7dce16fd-fbb0-476f-a3a6-a59990c4c376"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Quality Control]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="119" width="121" height="20" forecolor="#FFFFFF" backcolor="#999999" uuid="7cfa06ea-d1ef-4b49-a648-d400f009bb74"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Testing]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="139" width="121" height="20" forecolor="#FFFFFF" backcolor="#999999" uuid="a562c7b1-f5b7-42ac-b1a8-bb581afbcdae"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Final]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="159" width="121" height="20" forecolor="#FFFFFF" backcolor="#999999" uuid="a99e0013-58d0-4fc0-9001-f8ddf4bd8808"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Packing]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="204" y="39" width="121" height="20" forecolor="#FFFFFF" backcolor="#999999" uuid="bd129c11-cc69-4ffc-8c40-0754bdc2e3e0"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Pre Work]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="204" y="59" width="121" height="20" forecolor="#FFFFFF" backcolor="#999999" uuid="b3fd67a7-3b5d-4dbd-a923-b21f299d1648"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Assembly Line]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="204" y="79" width="121" height="20" forecolor="#FFFFFF" backcolor="#999999" uuid="e0f79f37-bba1-4e1a-b608-1576597a02bf"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Wave Soldering]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="204" y="99" width="121" height="20" forecolor="#FFFFFF" backcolor="#999999" uuid="b72a188b-6f42-47f7-8003-8915b7b1628f"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Quality Control]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="204" y="119" width="121" height="20" forecolor="#FFFFFF" backcolor="#999999" uuid="ef2d3fc0-e214-42ec-a5f4-b93b610d9358"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Testing]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="204" y="139" width="121" height="20" forecolor="#FFFFFF" backcolor="#999999" uuid="9ad7626c-3846-4d9d-96df-8beeb386901d"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Final]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="204" y="159" width="121" height="20" forecolor="#FFFFFF" backcolor="#999999" uuid="4f40ba33-cf60-40ad-beb2-a5d3d5dd459c"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Packing]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="133" y="39" width="41" height="20" uuid="4cd00e15-abfc-4073-9f60-a22d796f31d4"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{section_details_opw}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="133" y="59" width="41" height="20" uuid="6afee7a7-b487-4406-bffc-086a5457e2ed"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{section_details_oal}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="133" y="79" width="41" height="20" uuid="30e48523-b838-4233-ac6e-069a9f2a2e56"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{section_details_ows}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="133" y="99" width="41" height="20" uuid="21414df9-0b44-4f8e-af46-2aff9c783f23"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{section_details_oqc}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="133" y="119" width="41" height="20" uuid="9fdaa78f-0791-492a-af9b-85341f11c9d9"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{section_details_otesting}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="133" y="139" width="41" height="20" uuid="4a93a1e9-27b1-466c-ad81-c41c05bbd522"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{section_details_ofinal}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="133" y="159" width="41" height="20" uuid="488c43b4-7d57-414b-bd56-4018aa301e26"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{section_details_opacking}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="337" y="40" width="41" height="20" uuid="e94ab7c1-17ad-471f-92ea-adcfa02cbd57"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{section_details_mpw}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="337" y="60" width="41" height="20" uuid="ed9b3227-dd21-4662-b1b5-6508ee163837"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{section_details_mal}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="337" y="79" width="41" height="20" uuid="02a3221d-6ee4-4bc5-a060-00997940e737"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{section_details_mws}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="337" y="99" width="41" height="20" uuid="feb14c57-44c7-4e65-bada-d45c293a1dbf"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{section_details_mqc}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="337" y="119" width="41" height="20" uuid="116fe67b-289f-4661-b40e-f2b14f60ea3f"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{section_details_mtesting}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="337" y="139" width="41" height="20" uuid="36e369fd-f95e-481a-bf31-e947c7e2a60d"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{section_details_mfinal}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="337" y="159" width="41" height="20" uuid="dce27892-3468-429a-85ec-891bd90839d6"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{section_details_mpacking}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="133" y="0" width="29" height="20" uuid="479bf94b-089f-479c-b559-d90713a5cad5"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{section_details_duration}/540]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="184" width="40" height="13" backcolor="#E6E6E6" uuid="0d8ddaf9-8adb-4b2c-a38f-f758cfec5dc8"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="0" y="184" width="515" height="13" backcolor="#E6E6E6" uuid="2996cd8d-a749-4947-9c2b-5d430d5a1555"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="19" width="204" height="20" uuid="46f48d14-e6ba-48c1-8cae-96460b8f0528"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NO OF Operators]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="204" y="19" width="189" height="20" uuid="72e801df-11c8-46fd-a88e-1c7cf6872990"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NO OF Machines]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="0" y="184" width="144" height="13" uuid="8e2f1b0b-ae07-439e-a4b8-1b2e83a57cea"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="82" height="20" forecolor="#FFFFFF" backcolor="#999999" uuid="efe634a3-a5d5-4b19-95bc-ae205291a19b"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Duration]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="158" y="0" width="60" height="20" uuid="c013d50f-8eff-4404-84c9-5ba7dffab0e1"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Day]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="9de8a4fb-6df0-4d0b-b682-cee40e8c398c"/>
+			</line>
+			<line>
+				<reportElement x="0" y="20" width="555" height="1" uuid="5b474fb6-6f35-4b4a-8402-4ac84890e8ef"/>
+			</line>
+			<line>
+				<reportElement x="0" y="39" width="555" height="1" uuid="1b4a6e66-8700-44fe-8b06-7ca276c4f8aa"/>
+			</line>
+			<image>
+				<reportElement x="419" y="98" width="136" height="87" uuid="dbb11026-d99a-4c1f-8c91-76204d3b955b"/>
+				<imageExpression><![CDATA["/Users/prathibha/Desktop/JAVA/Jreport/src/jreport/vario.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
